@@ -1,7 +1,13 @@
+:root {
+    --footer-color: #4b4c4d;
+    --main-color: #1663A5;
+}
+
 #header a {
     text-decoration: none;
     color: black;
 }
+
 #header {
     display: flex;
     background-color: white;
@@ -12,13 +18,12 @@
     font-weight: 600;
     font-size: 16px;
     width: 100%;
-    
 }
 
 #header p {
-    color: #1663A5;
+    color: var(--main-color);
     margin-left: 15rem;
-    font-size:18px;
+    font-size: 18px;
 }
 
 nav {
@@ -32,19 +37,76 @@ nav ol {
 }
 
 nav ol li {
-    margin: 0 6px;
+    margin: 0 8px;
 }
 
 #header nav ol li a:hover {
-    color: #1663A5;
+    color:var(--main-color);
     transition-duration: 350ms;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
-#header a p:hover{
+
+main {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#header a p:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
+}
+
+footer {
+    text-align: center;
+}
+
+footer #logo a {
+    color: var(--footer-color);
+    font-size: 24px;
+    width: 40px;
+    line-height: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin: 0 8px;
+    opacity: 0.8;
+    transition-duration: 350ms;
+}
+
+footer #logo a:hover {
+    color: black;
+    opacity: 1;
+}
+
+footer #nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2rem;
+}
+
+footer #nav ul li {
+    margin: 0 8px;
+}
+
+footer #nav ul li a {
+    text-decoration: none;
+    color: var(--footer-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+footer #nav ul li a:hover {
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #aaa;
+    margin-bottom: 0;
 }
