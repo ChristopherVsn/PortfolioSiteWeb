@@ -1,0 +1,50 @@
+#header a {
+    text-decoration: none;
+    color: black;
+}
+#header {
+    display: flex;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    
+}
+
+#header p {
+    color: #1663A5;
+    margin-left: 15rem;
+    font-size:18px;
+}
+
+nav {
+    text-align: right;
+}
+
+nav ol {
+    list-style-type: none;
+    display: flex;
+    margin-right: 15rem;
+}
+
+nav ol li {
+    margin: 0 6px;
+}
+
+#header nav ol li a:hover {
+    color: #1663A5;
+    transition-duration: 350ms;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+#header a p:hover{
+    transform: scale(1.1);
+    transition-duration: 500ms;
+}
