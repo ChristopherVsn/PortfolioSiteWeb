@@ -10,4 +10,4 @@ window.addEventListener("scroll", () => {
         header.style.top = "0";
     }
     lastScrollTop = st <= 0 ? 0 : st;
-});
+}); 

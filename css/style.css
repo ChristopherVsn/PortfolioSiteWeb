@@ -4,6 +4,7 @@
 }
 *{
     list-style:none;
+    font-family: 'Montserrat', sans-serif;
 }
 #header a {
     text-decoration: none;
@@ -16,7 +17,6 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     font-size: 16px;
     width: 100%;
@@ -47,7 +47,9 @@ nav ol li {
 
 #header nav ol li a:hover {
     color:var(--main-color);
-    transition-duration: 350ms;
+    transition-duration: 0.35s;
+    position: relative;
+    top: 2px;
 }
 
 body {
@@ -102,7 +104,6 @@ footer #nav ul li {
 footer #nav ul li a {
     text-decoration: none;
     color: var(--footer-color);
-    font-family: 'Montserrat', sans-serif;
 }
 
 footer #nav ul li a:hover {
@@ -115,4 +116,20 @@ footer p {
     font-size: 15px;
     color: #aaa;
     margin-bottom: 0;
+}
+
+
+#AboutMe{
+    text-align: center;
+    margin-top: 125px;
+}
+#separator {
+    width: 10%;
+    height: 6px;  
+    border-radius: 10px;
+    background-color: var(--main-color);
+    margin: 20px auto; 
+}
+#logoMail{
+    width: 20px;
 }
