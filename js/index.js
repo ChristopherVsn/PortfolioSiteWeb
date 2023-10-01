@@ -57,7 +57,7 @@ function createBubble() {
 
     if (topOrBot==0){
         xPos = Math.random() * window.innerWidth;
-        yPos = 0;
+        yPos = -30;
     } else {
         xPos = Math.random() * window.innerWidth;
         yPos = 300;
@@ -97,7 +97,7 @@ function animateBubble(bubble, topOrBot) {
     if (topOrBot==0){
         yDirection ="350px";
     } else{
-        yDirection ="-100vh";
+        yDirection ="-400px";
     }
 
     bubble.animate(
@@ -106,7 +106,7 @@ function animateBubble(bubble, topOrBot) {
             { transform: `translate(${xDirection}px, ${yDirection})` },
         ],
         {
-            duration: Math.random() * 5000 + 5000,
+            duration: Math.random() * 7000 + 5000,
             iterations: 1,
         }
     ).onfinish = function () {
