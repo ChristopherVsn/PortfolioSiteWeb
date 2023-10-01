@@ -117,14 +117,23 @@ main {
 }
 .timeline-block-right {
     float: right;
-    margin-right: 30px;
+    margin-right: -1000px;
+    transition: 0.5s;
 }
 .timeline-block-left {
     float: left;
-    direction: rtl;
-
-    
+    direction: rtl; 
+    margin-left: -1000px;
+    transition: 0.5s;
 }
+
+.timeline-left-block-show{
+    margin-left: -10px;
+}
+.timeline-right-block-show{
+    margin-right: 30px;
+}
+
 .circle{
     width: 20px;
     height: 20px;
@@ -157,6 +166,7 @@ main {
 #timeline a:hover{
     font-weight: 600;
 }
+
 
 
 
