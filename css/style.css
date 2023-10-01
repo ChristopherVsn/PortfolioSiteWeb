@@ -2,6 +2,10 @@
     --footer-color: #4b4c4d;
     --main-color: #1663A5;
 }
+a{
+    text-decoration: none;
+    color:var(--main-color);
+}
 *{
     list-style:none;
     font-family: 'Montserrat', sans-serif;
@@ -23,6 +27,7 @@
     position: fixed;
     top: 0;
     transition: 0.5s;
+    z-index: 1000;
 
 }
 
@@ -59,14 +64,101 @@ body {
 
 main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 80px;
-
+    margin: 30px 0;
+    padding: 30px 0;
+    min-height: 100vh;
 }
 
 #header a p:hover {
     transform: scale(1.1);
     transition-duration: 500ms;
 }
+
+
+#AboutMe{
+    text-align: center;
+    margin-top: 50px;
+}
+#separator {
+    width: 10%;
+    height: 6px;  
+    border-radius: 10px;
+    background-color: var(--main-color);
+    margin: 20px auto; 
+}
+#logoMail{
+    width: 20px;
+}
+
+#timeline {
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position:relative;
+    overflow: hidden;
+}
+
+
+#timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+    background: #CCD1D9;
+} 
+.timeline-block{
+    width: 50%;
+    display: flex;
+    clear: both;
+    margin: auto -10px;
+}
+.timeline-block-right {
+    float: right;
+    margin-right: 30px;
+}
+.timeline-block-left {
+    float: left;
+    direction: rtl;
+
+    
+}
+.circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--main-color);   
+    z-index: 1; 
+    border: 2px solid #f5f7fad5;
+    margin-top: 7px;
+}
+.timeline-content{
+    padding: 0 15px;
+    width: 95%;
+}
+
+.timeline-content time{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.timeline-content .diploma{
+    font-size:1.2rem;
+    color: #aaa;
+    margin:4px auto;
+}
+.timeline-content .description {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+}
+#timeline a:hover{
+    font-weight: 600;
+}
+
+
 
 footer {
     text-align: center;
@@ -116,20 +208,4 @@ footer p {
     font-size: 15px;
     color: #aaa;
     margin-bottom: 0;
-}
-
-
-#AboutMe{
-    text-align: center;
-    margin-top: 125px;
-}
-#separator {
-    width: 10%;
-    height: 6px;  
-    border-radius: 10px;
-    background-color: var(--main-color);
-    margin: 20px auto; 
-}
-#logoMail{
-    width: 20px;
 }
