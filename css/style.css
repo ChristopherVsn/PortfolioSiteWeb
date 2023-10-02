@@ -1,6 +1,6 @@
 :root {
     --footer-color: #4b4c4d;
-    --main-color: #1663A5;
+    --main-color: #5EACD3;
 }
 a{
     text-decoration: none;
@@ -79,20 +79,54 @@ main {
 #aboutMe{
     position: relative;
     text-align: center;
-    margin-top: 50px;
     overflow: hidden;
-
+    min-height: 95vh;
+    background: url(../img/aboutMeBackground.png) no-repeat center center/cover;
 }
-#separator {
+
+#aboutMe #aboutMe-Content {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color:white;
+}
+#aboutMe hr {
     width: 10%;
     height: 6px;  
     border-radius: 10px;
-    background-color: var(--main-color);
+    background-color: white;
     margin: 20px auto; 
 }
-#cv{
-    z-index: 1;
+#aboutMe-Content p{
+    font-size:1.1rem;
 }
+#aboutMe-Content h1{
+    font-size: 2.3rem;
+}
+#languages{
+    position: absolute;
+    top: 85%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+#languages p{
+    color:white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+#languages ul{
+    display:flex;
+}
+#languages ul li{
+    margin: auto;
+}
+#languages ul li img{
+    width: 4rem;
+}
+
 
 
 
@@ -121,10 +155,9 @@ main {
 }
 
 
-#timeline:before {
+#timeline::before {
     content: '';
     position: absolute;
-    top: 0;
     left: 50%;
     width: 2px;
     height: 100%;
@@ -196,7 +229,7 @@ footer {
     text-align: center;
 }
 
-footer #logo a {
+footer > a {
     color: var(--footer-color);
     font-size: 24px;
     width: 40px;
@@ -209,28 +242,28 @@ footer #logo a {
     transition-duration: 350ms;
 }
 
-footer #logo a:hover {
+footer > a:hover {
     color: black;
     opacity: 1;
 }
 
-footer #nav ul {
+footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 2rem;
 }
 
-footer #nav ul li {
+footer ul li {
     margin: 0 8px;
 }
 
-footer #nav ul li a {
+footer ul li a {
     text-decoration: none;
     color: var(--footer-color);
 }
 
-footer #nav ul li a:hover {
+footer ul li a:hover {
     color: var(--main-color);
     font-weight: bold;
 }
@@ -248,5 +281,6 @@ footer p {
 .bubble {
     position: absolute;
     border-radius: 50%;
-    opacity:0.5;
+    opacity:0.1;
 }
+

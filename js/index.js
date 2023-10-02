@@ -60,7 +60,7 @@ function createBubble() {
         yPos = -30;
     } else {
         xPos = Math.random() * window.innerWidth;
-        yPos = 300;
+        yPos = 700;
     }
     bubble.style.left = xPos+"px";
     bubble.style.top = yPos+"px";
@@ -74,7 +74,7 @@ function createBubble() {
 
     animateBubble(bubble, topOrBot);
     addOnClickBubble(bubble);
-    document.getElementById('aboutMe').appendChild(bubble);
+    document.getElementById('timeline').appendChild(bubble);
 }
 
 
@@ -95,9 +95,9 @@ function animateBubble(bubble, topOrBot) {
     let yDirection;
 
     if (topOrBot==0){
-        yDirection ="350px";
+        yDirection ="950px";
     } else{
-        yDirection ="-400px";
+        yDirection ="-750px";
     }
 
     bubble.animate(
@@ -106,7 +106,7 @@ function animateBubble(bubble, topOrBot) {
             { transform: `translate(${xDirection}px, ${yDirection})` },
         ],
         {
-            duration: Math.random() * 7000 + 5000,
+            duration: Math.random() * 5000 + 5000,
             iterations: 1,
         }
     ).onfinish = function () {
@@ -124,6 +124,6 @@ function getRandomColor() {
     return color;
 }
 
-for (let i = 0; i < 6; i++) {
-    setTimeout(createBubble, i * 1500);
+for (let i = 0; i < 30; i++) {
+    setTimeout(createBubble, i *300);
 }
