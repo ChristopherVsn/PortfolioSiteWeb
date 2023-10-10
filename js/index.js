@@ -12,6 +12,71 @@ window.addEventListener("scroll", () => {
     lastScrollTop = st <= 0 ? 0 : st;
 }); 
 
+// Pupup on language logos
+class tooltip {
+    static bind(selector) {
+        document.querySelectorAll(selector).forEach(element => new tooltip(element))
+    }
+
+    constructor(element) {
+        this.element = element;
+        let tooltipTarget = this.element.getAttribute('data-tooltip');
+        if (this.element.getAttribute('data-tooltip')) {
+            this.title = document.querySelector(tooltipTarget).innerHTML;
+        }
+        this.element.addEventListener('mouseover', this.mouseOver.bind(this));
+        this.element.addEventListener('mouseout', this.mouseOut.bind(this));
+        this.tooltip = null;
+    }
+    mouseOver() {
+        let tooltip = this.createTooltip();
+        if (tooltip) {
+            let width = tooltip.offsetWidth;
+            let height = tooltip.offsetHeight;
+            let left=this.element.offsetWidth/2-width/2+this.element.getBoundingClientRect().left;
+            let top = this.element.getBoundingClientRect().top - height - 15+document.documentElement.scrollTop;
+     
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
+            tooltip.classList.add('visible');
+        }
+    }
+
+    mouseOut() {
+        if (this.tooltip !== null) {
+            this.tooltip.classList.remove('visible');
+            setTimeout(() => {
+                if (this.tooltip !== null) {
+                    document.body.removeChild(this.tooltip);
+                    this.tooltip = null;
+                }
+            }, 300);
+        }
+    }
+    
+    
+    createTooltip() {
+        if (this.tooltip===null) {
+            let tooltip = document.createElement('div');
+            tooltip.classList.add('tooltip');
+            tooltip.innerHTML = this.title; 
+            document.body.appendChild(tooltip);
+            this.tooltip = tooltip;
+        }
+        return this.tooltip;
+
+    }
+    
+}
+
+tooltip.bind('.moreInfo');
+
+ 
+    
+
+
+
+
 
 // TimeLine
 const allLeftBlock= document.querySelectorAll('.timeline-block-left')
@@ -45,7 +110,7 @@ window.addEventListener('scroll', () => {
 
 
 
-// Generate bubble on aboutMe BackGround
+// Generate bubble on Timeline BackGround
 let nbClicked=0;
 
 function createBubble() {

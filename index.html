@@ -6,7 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/moreInfo.css">
+
     <title>Christopher Voisin - Portfolio</title>
+    
 </head>
 
 <body>
@@ -32,17 +35,88 @@
                 qu'ils soient personnels ou bien professionnels.</p>
             </div>
             <div id="languages">
-                <p>Mes langages : </p>
+                <p>Mes langages :</p>
                 <ul>
-                    <li><img src="../img/logoJava.png"></li>
-                    <li><img src="../img/logoSQL.png"></li>
-                    <li><img src="../img/logoHTML.png"></li>
-                    <li><img src="../img/logoCSS.png"></li>
-                    <li><img src="../img/logoPHP.png"></li>
-                    <li><img src="../img/logoC.png"></li>
+                    <li><img class="moreInfo" src="../img/logoJava.png" data-tooltip="#tooltip-contentJava"></li>
+                    <li><img class="moreInfo" src="../img/logoSQL.png" data-tooltip="#tooltip-contentSQL"></li>
+                    <li><img class="moreInfo" src="../img/logoHTML.png" data-tooltip="#tooltip-contentHTML"></li>
+                    <li><img class="moreInfo" src="../img/logoCSS.png" data-tooltip="#tooltip-contentCSS"></li>
+                    <li><img class="moreInfo" src="../img/logoJS.png" data-tooltip="#tooltip-contentJS"></li>
+                    <li><img class="moreInfo" src="../img/logoPHP.png" data-tooltip="#tooltip-contentPHP"></li>
+                    <li><img class="moreInfo" src="../img/logoC.png" data-tooltip="#tooltip-contentC"></li>
+
                 </ul>
             </div>    
         </div>
+
+        <div style="display:none" id="tooltip-contentJava">
+            <h2>Java</h2>
+            <p>
+                J'ai utilisé de nombreuses fois ce langage que ce soit 
+                pour des projets personnels ou bien universitaires.<br>
+                Je maitrise les différentes notions de ce langage telles
+                que les interfaces, les exceptions, les lambdas, les streams etc...
+            </p>
+            <img src="../img/troisetoiles.png" alt="Stars" />
+        </div>
+
+        <div style="display:none" id="tooltip-contentSQL">
+            <h2>SQL</h2>
+            <p>
+                Ce langage a été utilisé dans le cadre de projets universitaires.
+                J'ai pu apprendre à créer des bases de données, à les manipuler
+                et à les interroger. <br>
+                Associé à ce langage je maitrise également APEX Oracle, SQLDevelopper
+                et le langage PL/SQL.
+            </p>
+            <img src="../img/troisetoiles.png" alt="Stars" />
+        </div>
+
+        <div style="display:none" id="tooltip-contentHTML">
+            <h2>HTML</h2>
+            <p>
+                J'ai appris les bases de ce langage lors de ma formation au lycée et en première année de BUT.
+                <br>J'ai pu consolider mes connaissances en le pratiquant lors de projets personnels tels que ce portfolio.
+            </p>
+            <img src="../img/quatreetoiles.png" alt="Stars" />
+        </div>
+
+        <div style="display:none" id="tooltip-contentCSS">
+            <h2>CSS</h2>
+            <p>
+                De même que pour l'HTML, j'ai appris ce langage lors de ma formation au lycée et en première année de BUT.
+                <br>J'ai également pu consolider mes connaissances en autodidacte lors de projets personnels. 
+            </p>
+            <img src="../img/troisetoiles.png" alt="Stars" />
+        </div>
+        <div style="display:none" id="tooltip-contentJS">
+            <h2>CSS</h2>
+            <p>
+                J'ai appris ce langage en autodidacte afin de réaliser des projets personnels tels que ce portfolio.
+                <br>Mon apprentissage de ce langage se poursuivra au deuxième semestre de ma deuxième année de BUT.    
+            </p>
+            <img src="../img/deuxetoiles.png" alt="Stars" />
+        </div>
+
+        <div style="display:none" id="tooltip-contentPHP">
+            <h2>PHP</h2>
+            <p>
+                J'ai découvert ce langage en deuxième année de BUT et j'ai pu apprendre les bases ainsi que différentes notions avancées.
+                <br> Mes expériences incluent la gestion de base de données, la mise en œuvre de sessions et de cookies, entre autres.
+           
+            </p>
+            <img src="../img/troisetoiles.png" alt="Stars" />
+        </div>
+        <div style="display:none" id="tooltip-contentC">
+            <h2>C</h2>
+            <p>
+                Je maitrise les bases de ce langage, que ce soit la syntaxe (Boucle, condition etc...) et la notion de pointeur.
+            </p>
+            <img src="../img/deuxetoiles.png" alt="Stars" />
+        </div>
+        
+
+
         <br>
         <div id="timeline">
             <ul>
@@ -81,9 +155,6 @@
                 </div>
             </ul>
         </div>
-    
-
-
     </main>
     <footer>
         <a href="https://www.linkedin.com/in/christopher-voisin/" target="_blank"><i class="icon ion-social-linkedin"></i></a>
