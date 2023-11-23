@@ -1,0 +1,50 @@
+.slider{
+    height: 300px;
+    max-width: 800px;
+    position: relative;
+    
+    margin: 0 auto;
+}
+.slider_nav_button_next{
+    right:20px;
+
+}
+.slider_nav_button_prev{
+    left:20px;
+}
+.slider_nav_button:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+.slider_nav_button{
+    background-color: transparent;
+    border:none;
+    top:50%;
+    transform: translateY(-50%);
+    cursor:pointer;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+
+}
+.slider_nav_button svg{
+    width: 50px;
+    height: 50px;
+}
+
+.slider_content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+
+}
+.slider_content_item{
+    height: 100%;
+    min-width: 100%;
+    
+}
+.slider_content_item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}

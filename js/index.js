@@ -192,3 +192,10 @@ function getRandomColor() {
 for (let i = 0; i < 30; i++) {
     setTimeout(createBubble, i *300);
 }
+
+// Add smooth effect on button "projects"
+document.querySelector('li a[href="#projects"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetSection = document.getElementById('projects');
+    targetSection.scrollIntoView({ behavior: 'smooth' });
+});

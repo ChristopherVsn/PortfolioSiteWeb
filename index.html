@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slider.css">
     <link rel="stylesheet" href="css/moreInfo.css">
 
     <title>Christopher Voisin - Portfolio</title>
@@ -18,7 +19,7 @@
         <nav>
             <ol>
                 <li><a href="#">ACCUEIL</a></li>
-                <li><a href="#">PROJETS</a></li>
+                <li><a href="#projects">PROJETS</a></li>
             </ol>
         </nav>
     </div>
@@ -46,6 +47,7 @@
                     <li><img class="moreInfo" src="../img/logoC.png" data-tooltip="#tooltip-contentC"></li>
 
                 </ul>
+                <p id="info">Survolez un logo pour plus d'informations</p>
             </div>    
         </div>
 
@@ -115,6 +117,34 @@
             <img src="../img/deuxetoiles.png" alt="Stars" />
         </div>
         
+        <div id="projects">
+            <h1>Mes projets</h1>
+            <div class="slider">
+                <div class="slider_nav">
+                    <button class="slider_nav_button slider_nav_button_prev"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 9l-3 3m0 0l3 3m-3-3h7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      </button>
+                    <button class="slider_nav_button slider_nav_button_next"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                      </button>
+                </div>
+
+                <div class="slider_content">
+                    <div class="slider_content_item">
+                        <img src="img/demineur.png" alt="demineur">
+                    </div>
+                    <div class="slider_content_item">
+                        <img src ="img/snake.png" alt="snake">
+                    </div>                
+                    <div class="slider_content_item">
+                        <img src="img/oTomates.png" alt="oTomates">
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
 
         <br>
@@ -170,6 +200,8 @@
 
     <!-- JavaScript -->
     <script src="js/index.js"></script>
+    <script src="js/slider.js"></script>
+
 </body>
 
 </html>
